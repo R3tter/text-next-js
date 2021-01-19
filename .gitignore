@@ -1,34 +1,22 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+.idea
+.tmp
+stats.json
+node_modules
+/npm-debug.log
+dist
+preprod
+coverage
+*.sublime-*
+.tern-port
+.cache-loader
 .DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# vercel
-.vercel
+*.lock
+package-lock.json
+yarn-error.log
+.vscode/
+cypress/fixtures
+cypress/plugins
+cypress/support
+cypress/videos
+cypress/screenshots
+db.json
