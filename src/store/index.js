@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Cached } from 'App/reducers/cached';
+import { Test } from 'App/reducers/testReducer';
 import { LOCAL_STORAGE_NAME } from 'constants/index.js';
 
 import { loadState, saveState, clearState } from './localStorage';
@@ -9,7 +10,8 @@ import { loadState, saveState, clearState } from './localStorage';
 let store;
 
 const mergedReducers = {
-  Cached
+  Cached,
+  Test
 };
 
 // update localStorage
@@ -36,10 +38,17 @@ const rootReducer = (state, action) => {
   return appReducer(state, action);
 };
 
-const initialState = loadState(LOCAL_STORAGE_NAME);
+const cached = loadState(LOCAL_STORAGE_NAME);
 
-const initStore = (preloadedState = initialState) =>
-  createStore(rootReducer, preloadedState, composeWithDevTools(applyMiddleware(thunk, cachedMiddleware)));
+const initStore = (preloadedState = {}) =>
+  createStore(
+    rootReducer,
+    {
+      ...preloadedState,
+      ...cached
+    },
+    composeWithDevTools(applyMiddleware(thunk, cachedMiddleware))
+  );
 
 export const initializeStore = preloadedState => {
   let localStore = store ?? initStore(preloadedState);
