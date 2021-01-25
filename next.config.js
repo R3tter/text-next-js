@@ -1,5 +1,8 @@
+const { version } = require('./package.json');
+const api = require('./config/api');
+
 module.exports = {
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config, { dev, webpack }) => {
     return {
       ...config,
       module: {
@@ -13,7 +16,17 @@ module.exports = {
             loader: 'eslint-loader'
           }
         ]
-      }
+      },
+      plugins: [
+        ...config.plugins,
+        new webpack.DefinePlugin({
+          DEV: JSON.stringify(dev),
+          PROD: JSON.stringify(dev),
+          VERSION: JSON.stringify(version),
+          URL: JSON.stringify(api[process.env.api].rest),
+          SOCKET_URL: JSON.stringify(api[process.env.api].socket)
+        })
+      ]
     };
   }
 };

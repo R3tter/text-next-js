@@ -1,2 +1,3 @@
 import { users } from 'api';
-export default users
+
+export default users;
