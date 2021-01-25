@@ -10,6 +10,8 @@
       "store/*": ["store/*"],
       "App": ["features/App"],
       "App/*": ["features/App/*"],
+      "Home": ["features/Home"],
+      "Home/*": ["features/Home/*"],
       "Common": ["features/Common"],
       "Common/*": ["features/Common/*"],
       "FormComponents": ["features/FormComponents"],
