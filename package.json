@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start"
   },
@@ -68,7 +68,7 @@
     "@jmind.systems/react-modal": "0.0.26",
     "@jmind.systems/react-status-controller": "0.0.13",
     "aphrodite": "^2.4.0",
-    "api-req-redux": "^2.0.8",
+    "api-req-redux": "^2.0.9",
     "core-js": "^3.8.3",
     "i18next": "^19.8.4",
     "next": "10.0.5",

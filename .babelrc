@@ -20,6 +20,7 @@
     ["module-resolver", {
       "alias": {
         "src": "./src",
+        "core": "./src/core",
         "api": "./src/api/",
         "config": "./config/",
         "icons": "./src/images/icons/",
