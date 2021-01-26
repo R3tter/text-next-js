@@ -48,7 +48,8 @@
     "react/jsx-indent": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "import/first": "off"
+    "import/first": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   },
   "extends": ["eslint:recommended", "plugin:react/recommended", "eslint-config-airbnb"]
 }

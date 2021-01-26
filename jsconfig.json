@@ -7,7 +7,6 @@
     "paths": {
       "src/*": ["/*"],
       "core/*": ["core/*"],
-      "api/*": ["core"],
       "store/*": ["store/*"],
       "App": ["features/App"],
       "App/*": ["features/App/*"],

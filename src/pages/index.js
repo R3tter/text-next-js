@@ -6,5 +6,5 @@ export default Home;
 
 export const getServerSideProps = async () => {
   const data = await serverDispatch(getTestData);
-  return { props: { initialReduxState: data } };
+  return { props: { initialReduxState: data, time: new Date().toISOString() } };
 };

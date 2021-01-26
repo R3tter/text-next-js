@@ -23,7 +23,7 @@ module.exports = {
           DEV: JSON.stringify(dev),
           PROD: JSON.stringify(dev),
           VERSION: JSON.stringify(version),
-          URL: JSON.stringify(api[process.env.api].rest),
+          REST_API: JSON.stringify(api[process.env.api].rest),
           SOCKET_URL: JSON.stringify(api[process.env.api].socket)
         })
       ]
