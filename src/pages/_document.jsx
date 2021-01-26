@@ -1,10 +1,6 @@
 import Document, { Head, Main, NextScript, Html } from 'next/document';
 import { StyleSheetServer } from 'aphrodite';
 
-if (typeof window === 'undefined') {
-  global.window = {};
-}
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const { html, css } = StyleSheetServer.renderStatic(() => ctx.renderPage());
