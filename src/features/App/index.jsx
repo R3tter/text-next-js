@@ -10,7 +10,7 @@ import { useStore } from 'hooks';
 export const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
     // eslint-disable-next-line
-    console.log(`%c current version is: ${URL}`, 'color: cornflowerblue; font-size: 13px;');
+    console.log(`%c current version is: ${VERSION}`, 'color: cornflowerblue; font-size: 13px;');
   }, []);
   const store = useStore(pageProps.initialReduxState);
 

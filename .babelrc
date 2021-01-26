@@ -6,7 +6,7 @@
       {
         "modules": "auto",
         "targets": {
-          "browsers": [">0.4%", "not dead", "not ie <= 11", "not op_mini all"]
+          "esmodules": true
         },
         "corejs": "3.x",
         "useBuiltIns": "usage"
