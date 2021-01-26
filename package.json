@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "jest --watchAll=false",
     "dev": "api=local next dev -p 8080",
     "build": "api=dev next build",
-    "start": "next start"
+    "cy": "cypress run",
+    "cy:dev": "cypress open",
+    "start": "next start",
+    "storybook": "start-storybook -p 6006"
   },
   "jest": {
     "setupFilesAfterEnv": [
@@ -46,7 +50,7 @@
     "babel-loader": "^8.2.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "css-loader": "^5.0.1",
-    "cypress": "^6.0.0",
+    "cypress": "^6.3.0",
     "eslint": "^7.14.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
