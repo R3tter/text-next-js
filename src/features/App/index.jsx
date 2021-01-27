@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 
 const Notifications = dynamic(() => import('react-notify-library').then(mod => mod.Notifications), { ssr: false });
 
+import 'src/i18n';
 import { useStore } from 'hooks';
 
 export const MyApp = ({ Component, pageProps }) => {
