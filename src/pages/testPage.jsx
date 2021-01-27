@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { StyleSheet, css } from 'aphrodite/no-important';
 // remove this file.
@@ -8,11 +9,16 @@ const regular = StyleSheet.create({
   }
 });
 
-const TestPage = ({ time }) => (
-  <Link href="/">
-    <a className={css(regular.test)}>{time}</a>
-  </Link>
-);
+const TestPage = ({ time }) => {
+  const { t } = useTranslation(['common']);
+  return (
+    <Link href="/" locale="en">
+      <a className={css(regular.test)}>
+        {t('test')} {time}
+      </a>
+    </Link>
+  );
+};
 
 TestPage.propTypes = {
   time: PropTypes.any

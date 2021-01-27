@@ -27,7 +27,7 @@ export const Home = ({ time }) => {
         <div className={css(styles.regular.wrapper)} onClick={setModal}>
           {t('click')} {time}
         </div>
-        <Link href="/testPage">
+        <Link href="/testPage" locale="ru">
           <a>Test page {data.id}</a>
         </Link>
         <Modal
