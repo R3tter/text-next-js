@@ -2,6 +2,10 @@ const { version } = require('./package.json');
 const api = require('./config/api');
 
 module.exports = {
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'en'
+  },
   webpack: (config, { dev, webpack }) => {
     return {
       ...config,
