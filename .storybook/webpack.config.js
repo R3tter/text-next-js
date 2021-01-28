@@ -1,5 +1,4 @@
-const path = require('path');
-const icons = path.join(__dirname, '../src/images/icons');
+const { icons } = require('../config/paths');
 
 module.exports = async ({ config }) => {
   const svgLoader = config.module.rules.find(rule => rule.test && rule.test.test('.svg'));
