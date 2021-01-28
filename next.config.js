@@ -21,26 +21,6 @@ module.exports = {
             loader: 'eslint-loader'
           },
           {
-            test: /\.(png|svg|jpg)$/,
-            exclude: icons,
-            use: {
-              loader: 'url-loader',
-              options: {
-                limit: 20000,
-                name: 'images/[name].[hash:6].[ext]'
-              }
-            }
-          },
-          {
-            test: /\.(eot|eot#iefix|ttf|woff|otf)$/,
-            use: {
-              loader: 'file-loader',
-              options: {
-                name: 'fonts/[name].[hash:6].[ext]'
-              }
-            }
-          },
-          {
             test: /\.pdf$/,
             use: {
               loader: 'file-loader',

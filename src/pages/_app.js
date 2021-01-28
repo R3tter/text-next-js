@@ -2,6 +2,7 @@ import App from 'next/app';
 import i18next from 'i18next';
 
 import { MyApp } from 'App';
+import '../index.css';
 
 MyApp.getInitialProps = async appContext => {
   const appProps = await App.getInitialProps(appContext);
