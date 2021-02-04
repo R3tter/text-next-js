@@ -21,3 +21,4 @@ cypress/videos
 cypress/screenshots
 db.json
 .next/
+pnpm-lock.yaml

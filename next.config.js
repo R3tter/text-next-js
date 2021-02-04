@@ -2,6 +2,8 @@ const { version } = require('./package.json');
 const api = require('./config/api');
 const { icons } = require('./config/paths');
 
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 module.exports = {
   i18n: {
     locales: ['en', 'ru'],
@@ -14,12 +16,6 @@ module.exports = {
         ...config.module,
         rules: [
           ...config.module.rules,
-          {
-            test: /\.(js|jsx)$/,
-            enforce: 'pre',
-            exclude: /node_modules/,
-            loader: 'eslint-loader'
-          },
           {
             test: /\.pdf$/,
             use: {
@@ -48,6 +44,9 @@ module.exports = {
           VERSION: JSON.stringify(version),
           REST_API: JSON.stringify(api[process.env.api].rest),
           SOCKET_URL: JSON.stringify(api[process.env.api].socket)
+        }),
+        new ESLintPlugin({
+          extensions: ['js', 'jsx']
         })
       ]
     };
